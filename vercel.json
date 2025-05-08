@@ -1,6 +1,15 @@
 {
   "version": 2,
   "routes": [
+    { 
+      "src": "/fonts.css", 
+      "headers": { "content-type": "text/css" },
+      "dest": "/fonts.css" 
+    },
+    { 
+      "src": "/fonts/(.*)", 
+      "dest": "/fonts/$1" 
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
