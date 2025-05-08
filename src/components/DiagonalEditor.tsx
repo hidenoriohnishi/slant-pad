@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { MARGIN, BORDER_WIDTH, TOP_MARGIN, TOP_MARGIN_VALUE } from '../utils/diagonalEditorUtils';
 import { useDiagonalEditor } from '../hooks/useDiagonalEditor';
 import { useFontSettings, FontType } from '../hooks/useFontSettings';
-import { FiTrash2, FiUpload, FiDownload } from 'react-icons/fi';
+import { FiTrash2, FiUpload, FiDownload, FiGithub } from 'react-icons/fi';
 
 export const DiagonalEditor: React.FC = () => {
   const { fontType, setFontType, fontFamily, fontSize, setFontSize, angle, setAngle } = useFontSettings();
@@ -216,16 +216,38 @@ export const DiagonalEditor: React.FC = () => {
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', marginLeft: 'auto' }}>
-          <span style={{ marginRight: 8 }}>{angle}°</span>
-          <input
-            type="range"
-            min={0}
-            max={90}
-            value={angle}
-            onChange={(e) => setAngle(Number(e.target.value))}
-            style={{ verticalAlign: 'middle' }}
-          />
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ marginRight: 8 }}>{angle}°</span>
+            <input
+              type="range"
+              min={0}
+              max={90}
+              value={angle}
+              onChange={(e) => setAngle(Number(e.target.value))}
+              style={{ verticalAlign: 'middle' }}
+            />
+          </div>
+          
+          <a 
+            href="https://github.com/hidenoriohnishi/slant-pad"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#fff',
+              textDecoration: 'none',
+              backgroundColor: '#24292e',
+              padding: '6px 12px',
+              borderRadius: 4,
+              cursor: 'pointer'
+            }}
+            title="View on GitHub"
+          >
+            <FiGithub size={20} />
+          </a>
         </div>
       </div>
       <div style={{ 
