@@ -24,6 +24,36 @@
       "dest": "/fonts/$1" 
     },
     {
+      "src": "/logo.svg",
+      "headers": { "content-type": "image/svg+xml" },
+      "dest": "/logo.svg"
+    },
+    {
+      "src": "/icon.svg",
+      "headers": { "content-type": "image/svg+xml" },
+      "dest": "/icon.svg"
+    },
+    {
+      "src": "/icon.ico",
+      "headers": { "content-type": "image/x-icon" },
+      "dest": "/icon.ico"
+    },
+    {
+      "src": "/favicon.ico",
+      "headers": { "content-type": "image/x-icon" },
+      "dest": "/icon.ico"
+    },
+    {
+      "src": "/(.*\\.svg)",
+      "headers": { "content-type": "image/svg+xml" },
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.ico)",
+      "headers": { "content-type": "image/x-icon" },
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
