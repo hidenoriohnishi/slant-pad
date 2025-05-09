@@ -1,5 +1,7 @@
 # Slant Pad - The Diagonal Text Editor
 
+<br/>
+
 <div align="center">
   <img src="public/logo.svg" alt="Slant Pad Logo" width="200"/>
   <br/><br/>
@@ -36,6 +38,16 @@ Slant Pad is a unique text editor that allows you to write and edit text diagona
 ## License
 
 This project is open source and available under the MIT License.
+
+
+## Font License
+
+This application includes the Xiaolai Font (Xiaolai Mono SC / Xiaolai SC), which is licensed under the SIL Open Font License, Version 1.1.
+
+https://github.com/lxgw/kose-font
+
+
+***
 
 <div align="center">
   <img src="public/icon.svg" alt="Slant Pad Icon" width="50"/>
